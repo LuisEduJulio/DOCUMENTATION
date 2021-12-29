@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>3b6c22cf-db83-494d-81ca-fe02abe066f1</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
+	<PackageReference Include="FluentValidation" Version="10.3.4" />
+	<PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+	<PackageReference Include="MediatR" Version="9.0.0" />
+	<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
+	<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
+		<PrivateAssets>all</PrivateAssets>
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+	<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DOCUMENTATION.IOC\DOCUMENTATION.IOC.csproj" />
+  </ItemGroup>
+
+</Project>

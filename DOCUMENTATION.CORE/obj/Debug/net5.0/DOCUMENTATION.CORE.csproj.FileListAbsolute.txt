@@ -1,0 +1,12 @@
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\bin\Debug\net5.0\DOCUMENTATION.CORE.deps.json
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\bin\Debug\net5.0\DOCUMENTATION.CORE.dll
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\bin\Debug\net5.0\ref\DOCUMENTATION.CORE.dll
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\bin\Debug\net5.0\DOCUMENTATION.CORE.pdb
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.csproj.AssemblyReference.cache
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.AssemblyInfoInputs.cache
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.AssemblyInfo.cs
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.csproj.CoreCompileInputs.cache
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.dll
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\ref\DOCUMENTATION.CORE.dll
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.pdb

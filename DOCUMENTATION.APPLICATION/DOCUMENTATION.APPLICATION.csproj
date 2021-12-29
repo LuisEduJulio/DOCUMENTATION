@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="10.3.4" />
+		<PackageReference Include="MediatR" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\DOCUMENTATION.INFRASTRUCTURE\DOCUMENTATION.INFRASTRUCTURE.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="CommandHandlers\ArchiveCommandHandlers\" />
+	  <Folder Include="Commands\ArchiveCommands\" />
+	  <Folder Include="QueryHandlers\ArchiveQueryHandlers\" />
+	  <Folder Include="QueryHandlers\TopicQueryHandlers\" />
+	  <Folder Include="Querys\ArchiveQuerys\" />
+	  <Folder Include="Querys\TopicQuerys\" />
+	  <Folder Include="Validators\ArchiveValidators\" />
+	</ItemGroup>
+
+</Project>
