@@ -13,12 +13,11 @@ namespace DOCUMENTATION.IOC.Configurations
         public static IServiceCollection RegisterIocDependencies(this IServiceCollection services, IConfiguration Configuration)
         {
             services
-                .AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
-                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<TopicCreateCommandValidator>());
+                .AddControllers();
 
-            //services
-            //    .AddFluentValidation(fv => fv
-            //        .RegisterValidatorsFromAssemblyContaining<TopicCreateCommandValidator>());
+            services
+                .AddFluentValidation(fv => fv
+                    .RegisterValidatorsFromAssemblyContaining<TopicCreateCommandValidator>());
 
             services
                 .AddDbContext<AppDbContext>(options => options

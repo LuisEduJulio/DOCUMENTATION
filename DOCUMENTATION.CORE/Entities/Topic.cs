@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DOCUMENTATION.CORE.Entities
 {
@@ -18,8 +19,12 @@ namespace DOCUMENTATION.CORE.Entities
 
         public string Title { get; set; }
         public string Description { get; set; }
-        public int TopicId { get; set; }
-        public List<Topic> Topics { get; set; }
-        public List<Archive> Archives { get; set; }
+        public int? TopicId { get; set; }
+
+        [NotMapped]
+        public virtual List<Topic> Topics { get; set; }
+
+        [NotMapped]
+        public virtual List<Archive> Archives { get; set; }
     }
 }

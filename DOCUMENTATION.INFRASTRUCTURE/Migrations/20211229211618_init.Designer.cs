@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211228210621_Init")]
-    partial class Init
+    [Migration("20211229211618_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,6 +24,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
             modelBuilder.Entity("DOCUMENTATION.CORE.Entities.Archive", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateCreation")
@@ -88,8 +89,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                     b.HasOne("DOCUMENTATION.CORE.Entities.Topic", null)
                         .WithMany("Archives")
                         .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("DOCUMENTATION.CORE.Entities.Topic", "Topic")
                         .WithMany()
@@ -105,8 +105,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                     b.HasOne("DOCUMENTATION.CORE.Entities.Topic", null)
                         .WithMany("Topics")
                         .HasForeignKey("TopicId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("DOCUMENTATION.CORE.Entities.Topic", b =>

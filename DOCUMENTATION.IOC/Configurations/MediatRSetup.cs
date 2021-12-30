@@ -1,6 +1,4 @@
-﻿using DOCUMENTATION.APPLICATION.Core;
-using FluentValidation;
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
@@ -16,15 +14,6 @@ namespace DOCUMENTATION.IOC.Configurations
             };
 
             services.AddMediatR(assemblies);
-
-            //foreach (var assembly in assemblies)
-            //{
-            //    AssemblyScanner
-            //     .FindValidatorsInAssembly(assembly)
-            //     .ForEach(result => services.AddScoped(result.InterfaceType, result.ValidatorType));
-            //}
-
-            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(MediatorPipeline<,>));
         }
     }
 }

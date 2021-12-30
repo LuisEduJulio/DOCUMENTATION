@@ -14,6 +14,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Configurations
             builder
                 .HasOne(p => p.Topic)
                 .WithMany()
+                .IsRequired()
                 .HasForeignKey(p => p.Id);
         }
     }
