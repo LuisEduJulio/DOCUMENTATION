@@ -1,8 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CommandHandlers\ArchiveCommandHandlers\**" />
+    <Compile Remove="Commands\ArchiveCommands\**" />
+    <Compile Remove="QueryHandlers\ArchiveQueryHandlers\**" />
+    <Compile Remove="Querys\ArchiveQuerys\**" />
+    <Compile Remove="Validators\ArchiveValidators\**" />
+    <EmbeddedResource Remove="CommandHandlers\ArchiveCommandHandlers\**" />
+    <EmbeddedResource Remove="Commands\ArchiveCommands\**" />
+    <EmbeddedResource Remove="QueryHandlers\ArchiveQueryHandlers\**" />
+    <EmbeddedResource Remove="Querys\ArchiveQuerys\**" />
+    <EmbeddedResource Remove="Validators\ArchiveValidators\**" />
+    <None Remove="CommandHandlers\ArchiveCommandHandlers\**" />
+    <None Remove="Commands\ArchiveCommands\**" />
+    <None Remove="QueryHandlers\ArchiveQueryHandlers\**" />
+    <None Remove="Querys\ArchiveQuerys\**" />
+    <None Remove="Validators\ArchiveValidators\**" />
+  </ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="10.3.4" />
@@ -11,14 +29,6 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\DOCUMENTATION.INFRASTRUCTURE\DOCUMENTATION.INFRASTRUCTURE.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="CommandHandlers\ArchiveCommandHandlers\" />
-	  <Folder Include="Commands\ArchiveCommands\" />
-	  <Folder Include="QueryHandlers\ArchiveQueryHandlers\" />
-	  <Folder Include="Querys\ArchiveQuerys\" />
-	  <Folder Include="Validators\ArchiveValidators\" />
 	</ItemGroup>
 
 </Project>

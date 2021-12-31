@@ -115,6 +115,7 @@ C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -129,14 +130,18 @@ C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\NetTopologySuite.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\NetTopologySuite.IO.SqlServerBytes.dll
+C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\RestSharp.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\SQLitePCLRaw.core.dll
+C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\StackExchange.Redis.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\System.Data.SqlClient.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\System.Runtime.Caching.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
@@ -152,6 +157,7 @@ C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\DOCUMENTATION.APPLICATION.dll

@@ -10,7 +10,7 @@ namespace DOCUMENTATION.IOC.Configurations
         {
             services
                 .AddTransient<ITopicRepository, TopicRepository>()
-                .AddTransient<IArchiveRepository, ArchiveRepository>();
+                .AddTransient<IArticleRepository, ArticleRepository>();
         }
     }
 }

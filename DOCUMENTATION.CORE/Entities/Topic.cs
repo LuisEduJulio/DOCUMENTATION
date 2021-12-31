@@ -14,7 +14,7 @@ namespace DOCUMENTATION.CORE.Entities
             DateCreation = DateTime.Now;
 
             Topics = new List<Topic>();
-            Archives = new List<Archive>();
+            Articles = new List<Article>();
         }
 
         public Topic()
@@ -27,6 +27,11 @@ namespace DOCUMENTATION.CORE.Entities
         [NotMapped]
         public virtual List<Topic> Topics { get; set; }
         [NotMapped]
-        public virtual List<Archive> Archives { get; set; }
+        public virtual List<Article> Articles { get; set; }
+        public int AuthorId { get; set; }
+        [NotMapped]
+        public virtual Author Author { get; set; }
+        [NotMapped]
+        public virtual List<Record> Records { get; set; }
     }
 }

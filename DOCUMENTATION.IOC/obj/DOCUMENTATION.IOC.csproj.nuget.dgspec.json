@@ -209,6 +209,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[106.13.0, )"
@@ -309,6 +313,10 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[5.0.3, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[3.1.8, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",

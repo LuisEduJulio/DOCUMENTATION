@@ -13,7 +13,5 @@ namespace DOCUMENTATION.CORE.Repositories
         Task<Topic> GetIdAsync(int Id);
 
         Task<Topic> UpdateAsync(Topic topic);
-
-        Task<Topic> DeleteAsync(Topic topic);
     }
 }

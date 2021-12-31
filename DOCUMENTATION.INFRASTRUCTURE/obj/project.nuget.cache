@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "igixOgLiVZWttI1nCPL1B3nTG9yOEtqCYG/6N4plChaYxEMV1nmMTSTO+WPFCu9vJbHRbDTkjujtrKDMSZ3uEA==",
+  "dgSpecHash": "e8wAGGpx7PS7nz2K7LifugAmj6QPd81HAJzxjnoSa41uMiLudNx3CEl9g4wxyQs9p7n273qL5AkUoIo0pe8XaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\114534\\Documents\\Projetos\\DOCUMENTATION\\DOCUMENTATION.INFRASTRUCTURE\\DOCUMENTATION.INFRASTRUCTURE.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\114534\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\nettopologysuite\\2.0.0\\nettopologysuite.2.0.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\nettopologysuite.io.sqlserverbytes\\2.0.0\\nettopologysuite.io.sqlserverbytes.2.0.0.nupkg.sha512",
+    "C:\\Users\\114534\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\restsharp\\106.13.0\\restsharp.106.13.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

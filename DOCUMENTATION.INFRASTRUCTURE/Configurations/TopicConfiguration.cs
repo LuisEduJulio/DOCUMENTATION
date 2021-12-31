@@ -19,11 +19,11 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Configurations
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
-               .HasMany(p => p.Archives)
-               .WithOne()
-               .HasForeignKey(u => u.Id)
-               .IsRequired(false)
-               .OnDelete(DeleteBehavior.Restrict);
+              .HasOne(p => p.Author)
+              .WithMany(u => u.Topics)
+              .HasForeignKey(u => u.AuthorId)
+              .IsRequired(false)
+              .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

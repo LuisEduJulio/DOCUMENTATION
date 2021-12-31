@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
 {
-    public class ArchiveRepository : IArchiveRepository
+    public class ArticleRepository : IArticleRepository
     {
-        public ArchiveRepository()
+        public ArticleRepository()
         {
         }
 
-        public Task<Archive> AddAsync(Archive archive)
+        public Task<Article> AddAsync(Article archive)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<Archive>> GetIdAsync(int Id)
+        public Task<List<Article>> GetIdAsync(int Id)
         {
             throw new NotImplementedException();
         }

@@ -14,7 +14,6 @@ C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.CORE\bin\Debug\ne
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.CORE\bin\Debug\net5.0\DOCUMENTATION.CORE.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.CORE\bin\Debug\net5.0\ref\DOCUMENTATION.CORE.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.CORE\bin\Debug\net5.0\DOCUMENTATION.CORE.pdb
-C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.csprojAssemblyReference.cache
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.AssemblyInfoInputs.cache
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.CORE\obj\Debug\net5.0\DOCUMENTATION.CORE.AssemblyInfo.cs

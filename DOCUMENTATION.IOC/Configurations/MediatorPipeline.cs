@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DOCUMENTATION.APPLICATION.Core
+namespace DOCUMENTATION.IOC.Configurations
 {
     public class MediatorPipeline<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {

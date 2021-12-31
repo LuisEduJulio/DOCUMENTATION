@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 
 namespace DOCUMENTATION.CORE.Repositories
 {
-    public interface IArchiveRepository
+    public interface IArticleRepository
     {
-        Task<Archive> AddAsync(Archive archive);
+        Task<Article> AddAsync(Article archive);
 
-        Task<List<Archive>> GetIdAsync(int Id);
+        Task<List<Article>> GetIdAsync(int Id);
     }
 }

@@ -12,6 +12,12 @@ namespace DOCUMENTATION.IOC.Configurations
     {
         public static IServiceCollection RegisterIocDependencies(this IServiceCollection services, IConfiguration Configuration)
         {
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.InstanceName = "redis";
+                options.Configuration = "localhost:6379";
+            });
+
             services
                 .AddControllers();
 

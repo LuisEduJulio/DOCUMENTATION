@@ -11,7 +11,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Factory
         }
 
         public DbSet<Topic> Topics { get; set; }
-        public DbSet<Archive> Archives { get; set; }
+        public DbSet<Article> Articles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
