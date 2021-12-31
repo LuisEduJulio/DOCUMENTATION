@@ -17,9 +17,7 @@
 	  <Folder Include="CommandHandlers\ArchiveCommandHandlers\" />
 	  <Folder Include="Commands\ArchiveCommands\" />
 	  <Folder Include="QueryHandlers\ArchiveQueryHandlers\" />
-	  <Folder Include="QueryHandlers\TopicQueryHandlers\" />
 	  <Folder Include="Querys\ArchiveQuerys\" />
-	  <Folder Include="Querys\TopicQuerys\" />
 	  <Folder Include="Validators\ArchiveValidators\" />
 	</ItemGroup>
 

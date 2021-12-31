@@ -1,9 +1,11 @@
 ﻿using DOCUMENTATION.CORE.Entities;
 using DOCUMENTATION.CORE.Repositories;
 using DOCUMENTATION.INFRASTRUCTURE.Factory;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
@@ -33,19 +35,32 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<List<Topic>> GetAllAsync()
+        public async Task<List<Topic>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _dbContext
+                .Topics
+                .Where(t => t.DateDeleted.HasValue == false)
+                .ToListAsync();
         }
 
-        public Task<Topic> GetIdAsync(int Id)
+        public async Task<Topic> GetIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            var topic = await _dbContext
+                .Topics
+                .Include(s => s.Topics)
+                .FirstOrDefaultAsync(t => t.Id == Id && t.DateDeleted.HasValue == false);
+                          
+
+            return topic;
         }
 
-        public Task<Topic> UpdateAsync(Topic topic)
+        public async Task<Topic> UpdateAsync(Topic topic)
         {
-            throw new NotImplementedException();
+            var topicUpdate = _dbContext.Topics.Update(topic);
+
+            await _dbContext.SaveChangesAsync();
+
+            return topicUpdate.Entity;
         }
     }
 }

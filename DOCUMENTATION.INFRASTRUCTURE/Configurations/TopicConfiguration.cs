@@ -13,16 +13,16 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Configurations
 
             builder
                 .HasMany(p => p.Topics)
-                .WithOne()
-                .IsRequired(false)
+                .WithOne()                
                 .HasForeignKey(u => u.TopicId)
+                .IsRequired(false)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder
                .HasMany(p => p.Archives)
                .WithOne()
-               .IsRequired(false)
                .HasForeignKey(u => u.Id)
+               .IsRequired(false)
                .OnDelete(DeleteBehavior.Restrict);
         }
     }
