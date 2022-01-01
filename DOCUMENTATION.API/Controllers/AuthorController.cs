@@ -1,4 +1,5 @@
 ﻿using DOCUMENTATION.APPLICATION.Commands.AuthorCommand;
+using DOCUMENTATION.APPLICATION.Querys.AuthorQuerys;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -24,10 +25,28 @@ namespace DOCUMENTATION.API.Controllers
             return Ok(topic);
         }
 
-        [HttpPost("UpdateAuthorAdmin")]
+        [HttpGet("GetByIdAuthor/{Id}")]
+        public async Task<IActionResult> GetByIdAsync(int Id)
+        {
+            var getTopictByIdQuery = new GetAuthorByIdQuery(Id);
+
+            var topic = await _mediator.Send(getTopictByIdQuery);
+
+            return Ok(topic);
+        }
+
+        [HttpPut("UpdateAuthorAdmin")]
         public async Task<IActionResult> UpdateAdminAsync([FromBody] AuthorUpdateAdminCommand authorUpdateAdminCommand)
         {
             var topic = await _mediator.Send(authorUpdateAdminCommand);
+
+            return Ok(topic);
+        }
+
+        [HttpPut("UpdateAuthorAvatar")]
+        public async Task<IActionResult> UpdateAvatarAsync([FromBody] AuthorUpdateAvatarCommand authorUpdateAvatarCommand)
+        {
+            var topic = await _mediator.Send(authorUpdateAvatarCommand);
 
             return Ok(topic);
         }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211231212451_Init")]
+    [Migration("20211231223450_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,7 +88,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Author");
+                    b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("DOCUMENTATION.CORE.Entities.Comment", b =>
@@ -122,7 +122,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("DOCUMENTATION.CORE.Entities.Record", b =>
@@ -166,7 +166,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
 
                     b.HasIndex("TopicId");
 
-                    b.ToTable("Record");
+                    b.ToTable("Records");
                 });
 
             modelBuilder.Entity("DOCUMENTATION.CORE.Entities.Topic", b =>

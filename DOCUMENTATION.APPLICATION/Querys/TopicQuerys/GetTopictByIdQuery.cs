@@ -1,9 +1,9 @@
-﻿using DOCUMENTATION.CORE.Entities;
+﻿using DOCUMENTATION.APPLICATION.ModelView.TopicView;
 using MediatR;
 
 namespace DOCUMENTATION.APPLICATION.Querys
 {
-    public class GetTopictByIdQuery : IRequest<Topic>
+    public class GetTopictByIdQuery : IRequest<TopicView>
     {
         public GetTopictByIdQuery(int id)
         {

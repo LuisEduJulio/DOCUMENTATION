@@ -22,7 +22,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Configurations
               .HasOne(p => p.Author)
               .WithMany(u => u.Topics)
               .HasForeignKey(u => u.AuthorId)
-              .IsRequired(false)
+              .IsRequired()
               .OnDelete(DeleteBehavior.Restrict);
         }
     }

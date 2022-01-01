@@ -11,6 +11,7 @@
   </ItemGroup>
 	
 	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="10.1.1" />
 		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="3.1.8" />
 		<PackageReference Include="FluentValidation" Version="10.3.4" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
@@ -29,6 +30,7 @@
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\DOCUMENTATION.APPLICATION\DOCUMENTATION.APPLICATION.csproj" />
+	  <ProjectReference Include="..\DOCUMENTATION.CORE\DOCUMENTATION.CORE.csproj" />
 	</ItemGroup>
 
 </Project>

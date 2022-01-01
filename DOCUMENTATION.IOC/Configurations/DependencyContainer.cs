@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 
 namespace DOCUMENTATION.IOC.Configurations
 {
@@ -17,6 +18,12 @@ namespace DOCUMENTATION.IOC.Configurations
                 options.InstanceName = "redis";
                 options.Configuration = "localhost:6379";
             });
+
+            //services
+            //    .AddControllers()
+            //    .AddJsonOptions(x => x
+            //        .JsonSerializerOptions
+            //        .ReferenceHandler = ReferenceHandler.Preserve);
 
             services
                 .AddControllers();

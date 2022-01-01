@@ -8,7 +8,5 @@ namespace DOCUMENTATION.APPLICATION.Commands.AuthorCommand
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public bool Admin { get; set; }
-        public EAvatar? EAvatar { get; set; }
     }
 }

@@ -6,12 +6,13 @@ namespace DOCUMENTATION.CORE.Entities
 {
     public class Topic : BaseEntity
     {
-        public Topic(string title, string description, int? topicId)
+        public Topic(string title, string description, int authorId, int? topicId)
         {
             Title = title;
             Description = description;
             TopicId = topicId;
             DateCreation = DateTime.Now;
+            AuthorId = authorId;
 
             Topics = new List<Topic>();
             Articles = new List<Article>();

@@ -1,7 +1,11 @@
 ﻿using DOCUMENTATION.APPLICATION.Commands.AuthorCommand;
+using DOCUMENTATION.APPLICATION.Validators.AuthorCommandValidators;
 using DOCUMENTATION.CORE.Entities;
+using DOCUMENTATION.CORE.Repositories;
+using DOCUMENTATION.INFRASTRUCTURE.Exceptions;
 using MediatR;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -9,14 +13,33 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
 {
     public class AuthorUpdateAdminCommandHandler : IRequestHandler<AuthorUpdateAdminCommand, Author>
     {
-        public AuthorUpdateAdminCommandHandler()
+        private readonly IAuthorRepository _authorRepository;
+        public AuthorUpdateAdminCommandHandler(IAuthorRepository authorRepository)
         {
-
+            _authorRepository = authorRepository;
         }
 
-        public Task<Author> Handle(AuthorUpdateAdminCommand request, CancellationToken cancellationToken)
+        public async Task<Author> Handle(AuthorUpdateAdminCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var validation = await new AuthorUpdateAdminCommandValidator().ValidateAsync(request, cancellationToken);
+
+            if (!validation.IsValid)
+            {
+                throw new CustomException(validation.Errors.First().ErrorMessage);
+            }
+
+            var author = await _authorRepository.GetIdAsync(request.Id);
+
+            if (author == null)
+            {
+                throw new CustomException("Autor não existe!");
+            }
+
+            author.Admin = request.Admin;
+
+            var authorCreate = await _authorRepository.UpdateAsync(author);
+
+            return authorCreate;
         }
     }
 }

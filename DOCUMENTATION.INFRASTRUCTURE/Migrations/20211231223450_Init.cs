@@ -8,7 +8,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Author",
+                name: "Authors",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -23,7 +23,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Author", x => x.Id);
+                    table.PrimaryKey("PK_Authors", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -44,9 +44,9 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                 {
                     table.PrimaryKey("PK_Topics", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Topics_Author_AuthorId",
+                        name: "FK_Topics_Authors_AuthorId",
                         column: x => x.AuthorId,
-                        principalTable: "Author",
+                        principalTable: "Authors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -75,9 +75,9 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                 {
                     table.PrimaryKey("PK_Articles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Articles_Author_AuthorId",
+                        name: "FK_Articles_Authors_AuthorId",
                         column: x => x.AuthorId,
-                        principalTable: "Author",
+                        principalTable: "Authors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -89,7 +89,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Comment",
+                name: "Comments",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -103,23 +103,23 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Comment", x => x.Id);
+                    table.PrimaryKey("PK_Comments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comment_Articles_ArticleId",
+                        name: "FK_Comments_Articles_ArticleId",
                         column: x => x.ArticleId,
                         principalTable: "Articles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Comment_Author_AuthorId",
+                        name: "FK_Comments_Authors_AuthorId",
                         column: x => x.AuthorId,
-                        principalTable: "Author",
+                        principalTable: "Authors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Record",
+                name: "Records",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -135,27 +135,27 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Record", x => x.Id);
+                    table.PrimaryKey("PK_Records", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Record_Articles_ArticleId",
+                        name: "FK_Records_Articles_ArticleId",
                         column: x => x.ArticleId,
                         principalTable: "Articles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Record_Author_AuthorId",
+                        name: "FK_Records_Authors_AuthorId",
                         column: x => x.AuthorId,
-                        principalTable: "Author",
+                        principalTable: "Authors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Record_Comment_CommentId",
+                        name: "FK_Records_Comments_CommentId",
                         column: x => x.CommentId,
-                        principalTable: "Comment",
+                        principalTable: "Comments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Record_Topics_TopicId",
+                        name: "FK_Records_Topics_TopicId",
                         column: x => x.TopicId,
                         principalTable: "Topics",
                         principalColumn: "Id",
@@ -173,33 +173,33 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                 column: "TopicId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comment_ArticleId",
-                table: "Comment",
+                name: "IX_Comments_ArticleId",
+                table: "Comments",
                 column: "ArticleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comment_AuthorId",
-                table: "Comment",
+                name: "IX_Comments_AuthorId",
+                table: "Comments",
                 column: "AuthorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Record_ArticleId",
-                table: "Record",
+                name: "IX_Records_ArticleId",
+                table: "Records",
                 column: "ArticleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Record_AuthorId",
-                table: "Record",
+                name: "IX_Records_AuthorId",
+                table: "Records",
                 column: "AuthorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Record_CommentId",
-                table: "Record",
+                name: "IX_Records_CommentId",
+                table: "Records",
                 column: "CommentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Record_TopicId",
-                table: "Record",
+                name: "IX_Records_TopicId",
+                table: "Records",
                 column: "TopicId");
 
             migrationBuilder.CreateIndex(
@@ -216,10 +216,10 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Record");
+                name: "Records");
 
             migrationBuilder.DropTable(
-                name: "Comment");
+                name: "Comments");
 
             migrationBuilder.DropTable(
                 name: "Articles");
@@ -228,7 +228,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                 name: "Topics");
 
             migrationBuilder.DropTable(
-                name: "Author");
+                name: "Authors");
         }
     }
 }

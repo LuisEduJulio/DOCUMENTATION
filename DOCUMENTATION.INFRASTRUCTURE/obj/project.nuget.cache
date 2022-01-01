@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "e8wAGGpx7PS7nz2K7LifugAmj6QPd81HAJzxjnoSa41uMiLudNx3CEl9g4wxyQs9p7n273qL5AkUoIo0pe8XaA==",
+  "dgSpecHash": "wQpOOoInnqnBYdRYi92LD6IB/2P9fZ2Y9ztN8rsngSYOqlOwmEcqWttrlCdiQ+0cEdS+0iQ6DNEeOig96exdCw==",
   "success": true,
   "projectFilePath": "C:\\Users\\114534\\Documents\\Projetos\\DOCUMENTATION\\DOCUMENTATION.INFRASTRUCTURE\\DOCUMENTATION.INFRASTRUCTURE.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\114534\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\efcore.bulkextensions\\5.4.1\\efcore.bulkextensions.5.4.1.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -56,6 +57,7 @@
     "C:\\Users\\114534\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\114534\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",

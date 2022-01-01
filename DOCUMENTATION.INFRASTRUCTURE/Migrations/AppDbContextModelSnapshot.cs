@@ -86,7 +86,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Author");
+                    b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("DOCUMENTATION.CORE.Entities.Comment", b =>
@@ -120,7 +120,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("DOCUMENTATION.CORE.Entities.Record", b =>
@@ -164,7 +164,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
 
                     b.HasIndex("TopicId");
 
-                    b.ToTable("Record");
+                    b.ToTable("Records");
                 });
 
             modelBuilder.Entity("DOCUMENTATION.CORE.Entities.Topic", b =>

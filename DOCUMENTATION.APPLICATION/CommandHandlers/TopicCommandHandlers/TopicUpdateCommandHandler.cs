@@ -29,11 +29,16 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
 
             var topic = await _topicRepository.GetIdAsync(request.Id);
 
+            if(topic == null)
+            {
+                throw new CustomException("Tópico não existe!");
+            }
+
             topic.Title = request.Title ?? topic.Title;
             topic.Description = request.Description ?? topic.Description;
             topic.TopicId = request.TopicId ?? topic.TopicId;
             topic.DateUpdated = DateTime.Now;
-
+            
             var topicUpdate = await _topicRepository.UpdateAsync(topic);
 
             return topicUpdate;
