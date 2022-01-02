@@ -1,5 +1,4 @@
 ﻿using DOCUMENTATION.CORE.Entities;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DOCUMENTATION.CORE.Repositories
@@ -8,6 +7,8 @@ namespace DOCUMENTATION.CORE.Repositories
     {
         Task<Article> AddAsync(Article archive);
 
-        Task<List<Article>> GetIdAsync(int Id);
+        Task<Article> GetIdAsync(int Id);
+
+        Task<Article> UpdateAsync(Article archive);
     }
 }

@@ -1,25 +1,47 @@
 ﻿using DOCUMENTATION.CORE.Entities;
 using DOCUMENTATION.CORE.Repositories;
-using System;
-using System.Collections.Generic;
+using DOCUMENTATION.INFRASTRUCTURE.Factory;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
 {
     public class ArticleRepository : IArticleRepository
     {
-        public ArticleRepository()
+        private readonly AppDbContext _dbContext;
+
+        public ArticleRepository(AppDbContext dbContext)
         {
+            _dbContext = dbContext;
         }
 
-        public Task<Article> AddAsync(Article archive)
+        public async Task<Article> AddAsync(Article archive)
         {
-            throw new NotImplementedException();
+            var articleCreate = await _dbContext.Articles.AddAsync(archive);
+
+            await _dbContext.SaveChangesAsync();
+
+            return articleCreate.Entity;
         }
 
-        public Task<List<Article>> GetIdAsync(int Id)
+        public async Task<Article> GetIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            var article = await _dbContext
+                   .Articles
+                   .Include(t => t.Topic)
+                   .Include(a => a.Author)
+                   .FirstOrDefaultAsync(t => t.Id == Id && t.DateDeleted.HasValue == false);
+
+            return article;
+        }
+
+        public async Task<Article> UpdateAsync(Article archive)
+        {
+            var authorUpdate = _dbContext.Articles.Update(archive);
+
+            await _dbContext.SaveChangesAsync();
+
+            return authorUpdate.Entity;
         }
     }
 }

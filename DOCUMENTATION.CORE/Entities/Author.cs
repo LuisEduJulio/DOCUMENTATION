@@ -16,6 +16,7 @@ namespace DOCUMENTATION.CORE.Entities
             Articles = new List<Article>();
             Topics = new List<Topic>();
             Comments = new List<Comment>();
+            Records = new List<Record>();
         }
 
         public string Name { get; set; }

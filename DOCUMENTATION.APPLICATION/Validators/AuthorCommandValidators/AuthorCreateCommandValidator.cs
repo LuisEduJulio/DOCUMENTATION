@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace DOCUMENTATION.APPLICATION.Validators.AuthorCommandValidators
 {
-    class AuthorCreateCommandValidator : AbstractValidator<AuthorCreateCommand>
+    public class AuthorCreateCommandValidator : AbstractValidator<AuthorCreateCommand>
     {
         public AuthorCreateCommandValidator()
         {

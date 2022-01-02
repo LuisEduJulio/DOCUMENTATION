@@ -1,6 +1,6 @@
 ﻿using DOCUMENTATION.APPLICATION.Commands.AuthorCommand;
+using DOCUMENTATION.APPLICATION.ModelView.AuthorView;
 using DOCUMENTATION.APPLICATION.Validators.AuthorCommandValidators;
-using DOCUMENTATION.CORE.Entities;
 using DOCUMENTATION.CORE.Repositories;
 using DOCUMENTATION.INFRASTRUCTURE.Exceptions;
 using MediatR;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
 {
-    public class AuthorUpdateAdminCommandHandler : IRequestHandler<AuthorUpdateAdminCommand, Author>
+    public class AuthorUpdateAdminCommandHandler : IRequestHandler<AuthorUpdateAdminCommand, AuthorView>
     {
         private readonly IAuthorRepository _authorRepository;
         public AuthorUpdateAdminCommandHandler(IAuthorRepository authorRepository)
@@ -19,7 +19,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
             _authorRepository = authorRepository;
         }
 
-        public async Task<Author> Handle(AuthorUpdateAdminCommand request, CancellationToken cancellationToken)
+        public async Task<AuthorView> Handle(AuthorUpdateAdminCommand request, CancellationToken cancellationToken)
         {
             var validation = await new AuthorUpdateAdminCommandValidator().ValidateAsync(request, cancellationToken);
 
@@ -33,13 +33,22 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
             if (author == null)
             {
                 throw new CustomException("Autor não existe!");
-            }
+            }          
 
             author.Admin = request.Admin;
+            author.DateUpdated = DateTime.Now;
 
             var authorCreate = await _authorRepository.UpdateAsync(author);
 
-            return authorCreate;
+            var returnAuthor = new AuthorView(
+               authorCreate.Name,
+               authorCreate.Description,
+               authorCreate.Admin,
+               authorCreate.EAvatar,
+               authorCreate.DateUpdated
+           );
+
+            return returnAuthor;
         }
     }
 }

@@ -1,9 +1,10 @@
-﻿using DOCUMENTATION.CORE.Entities;
+﻿using DOCUMENTATION.APPLICATION.ModelView.ArticleView;
 using MediatR;
 
 namespace DOCUMENTATION.APPLICATION.Commands.ArticlesCommand
 {
-    public class ArticleCreateCommand : IRequest<Article>
+    public class ArticleCreateCommand : IRequest<ArticleView>
+    {      
     {      
         public string Title { get; set; }
         public string Description { get; set; }

@@ -18,7 +18,7 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpPost("CreateArticle")]
-        public async Task<IActionResult> PostAsync([FromBody] ArticleCreateCommand articleCreateCommand)
+        public async Task<IActionResult> PostCreateArticleAsync([FromBody] ArticleCreateCommand articleCreateCommand)
         {
             var topic = await _mediator.Send(articleCreateCommand);
 
@@ -26,7 +26,15 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpPut("UpdateArticle")]
-        public async Task<IActionResult> UpdateAsync([FromBody] ArticleUpdateCommand articleUpdateCommand)
+        public async Task<IActionResult> UpdateArticleAsync([FromBody] ArticleUpdateCommand articleUpdateCommand)
+        {
+            var topic = await _mediator.Send(articleUpdateCommand);
+
+            return Ok(topic);
+        }
+
+        [HttpPut("DisableArticle")]
+        public async Task<IActionResult> UpdateDisableArticleAsync([FromBody] ArticleUpdateCommand articleUpdateCommand)
         {
             var topic = await _mediator.Send(articleUpdateCommand);
 

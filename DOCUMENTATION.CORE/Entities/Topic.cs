@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace DOCUMENTATION.CORE.Entities
 {
@@ -16,6 +17,7 @@ namespace DOCUMENTATION.CORE.Entities
 
             Topics = new List<Topic>();
             Articles = new List<Article>();
+            Records = new List<Record>();
         }
 
         public Topic()
@@ -26,12 +28,13 @@ namespace DOCUMENTATION.CORE.Entities
         public string Description { get; set; }
         public int? TopicId { get; set; }
         [NotMapped]
-        public virtual List<Topic> Topics { get; set; }
-        [NotMapped]
-        public virtual List<Article> Articles { get; set; }
+        public virtual List<Topic> Topics { get; set; }       
         public int AuthorId { get; set; }
         [NotMapped]
+        [JsonIgnore]
         public virtual Author Author { get; set; }
+        [NotMapped]
+        public virtual List<Article> Articles { get; set; }
         [NotMapped]
         public virtual List<Record> Records { get; set; }
     }

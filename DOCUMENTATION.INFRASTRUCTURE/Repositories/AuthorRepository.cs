@@ -17,11 +17,11 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
 
         public async Task<Author> AddAsync(Author author)
         {
-            var topicCreate = await _dbContext.Authors.AddAsync(author);
+            var authorCreate = await _dbContext.Authors.AddAsync(author);
 
             await _dbContext.SaveChangesAsync();
 
-            return topicCreate.Entity;
+            return authorCreate.Entity;
         }
 
         public async Task<Author> GetIdAsync(int Id)
@@ -37,11 +37,11 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
 
         public async Task<Author> UpdateAsync(Author author)
         {
-            var topicCreate = _dbContext.Authors.Update(author);
+            var authorUpdate = _dbContext.Authors.Update(author);
 
             await _dbContext.SaveChangesAsync();
 
-            return topicCreate.Entity;
+            return authorUpdate.Entity;
         }
     }
 }

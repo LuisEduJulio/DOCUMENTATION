@@ -11,12 +11,12 @@ namespace DOCUMENTATION.APPLICATION.Validators.AuthorCommandValidators
                 .NotEmpty()
                 .NotNull()
                 .When(t => t.Id == 0)
-                .WithMessage("Informe o id do author!");
+                .WithMessage("Informe o seu usuário!");
 
             RuleFor(t => t.Admin)
                 .NotEmpty()
                 .NotNull()
-                .WithMessage("Informe a mudança de tipo de usuário do author!");
+                .WithMessage("Informe a alteração do tipo de usuário!");
         }
     }
 }

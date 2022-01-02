@@ -34,9 +34,25 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
                 throw new CustomException("Tópico não existe!");
             }
 
+            var topicSon = new Topic();
+
+            if (request.TopicId != null)
+            {
+                int verifyTopicId = Convert.ToInt32(request.TopicId);
+
+                var verifyTopicSonExist = await _topicRepository.GetIdAsync(verifyTopicId);
+
+                if(verifyTopicSonExist == null)
+                {
+                    throw new CustomException("Erro ao adicionar Tópico em outro tópico!");
+                }
+
+                topicSon.Id = verifyTopicSonExist.Id;
+            }
+
             topic.Title = request.Title ?? topic.Title;
             topic.Description = request.Description ?? topic.Description;
-            topic.TopicId = request.TopicId ?? topic.TopicId;
+            topic.TopicId = topicSon?.Id ?? topic.TopicId;
             topic.DateUpdated = DateTime.Now;
             
             var topicUpdate = await _topicRepository.UpdateAsync(topic);

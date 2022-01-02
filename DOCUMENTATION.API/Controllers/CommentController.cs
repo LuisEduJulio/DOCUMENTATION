@@ -17,7 +17,7 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpPost("CreateComment")]
-        public async Task<IActionResult> PostAsync([FromBody] CommentCreateCommand commentCreateCommand)
+        public async Task<IActionResult> PostCreateCommentAsync([FromBody] CommentCreateCommand commentCreateCommand)
         {
             var topic = await _mediator.Send(commentCreateCommand);
 

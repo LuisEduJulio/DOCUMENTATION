@@ -29,6 +29,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
 
             var topic = await _topicRepository.GetIdAsync(request.Id);
 
+            topic.DateUpdated = DateTime.Now;
             topic.DateDeleted = DateTime.Now;
 
             await _topicRepository.UpdateAsync(topic);

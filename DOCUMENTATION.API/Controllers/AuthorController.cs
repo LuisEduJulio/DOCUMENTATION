@@ -18,7 +18,7 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpPost("CreateAuthor")]
-        public async Task<IActionResult> PostAsync([FromBody] AuthorCreateCommand authorCreateCommand)
+        public async Task<IActionResult> PostCreateAuthorAsync([FromBody] AuthorCreateCommand authorCreateCommand)
         {
             var topic = await _mediator.Send(authorCreateCommand);
 
@@ -47,6 +47,14 @@ namespace DOCUMENTATION.API.Controllers
         public async Task<IActionResult> UpdateAvatarAsync([FromBody] AuthorUpdateAvatarCommand authorUpdateAvatarCommand)
         {
             var topic = await _mediator.Send(authorUpdateAvatarCommand);
+
+            return Ok(topic);
+        }
+
+        [HttpPut("DisableAuthor")]
+        public async Task<IActionResult> UpdateDisableAsync([FromBody] AuthorUpdateDisableCommand authorUpdateDisableCommand)
+        {
+            var topic = await _mediator.Send(authorUpdateDisableCommand);
 
             return Ok(topic);
         }

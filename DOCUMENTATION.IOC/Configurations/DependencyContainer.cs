@@ -25,6 +25,8 @@ namespace DOCUMENTATION.IOC.Configurations
             //        .JsonSerializerOptions
             //        .ReferenceHandler = ReferenceHandler.Preserve);
 
+            services.AddAutoMapperConfiguration();
+
             services
                 .AddControllers();
 

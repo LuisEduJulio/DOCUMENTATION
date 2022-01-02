@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace DOCUMENTATION.CORE.Entities
 {
@@ -11,18 +12,21 @@ namespace DOCUMENTATION.CORE.Entities
             Description = description;
             ArticleId = articleId;
             AuthorId = authorId;
-           DateCreation = DateTime.Now;
+            DateCreation = DateTime.Now;
+
+            Records = new List<Record>();
         }
 
         public string Description { get; set; }
-        [NotMapped]
-        public virtual Article Article { get; set; }
         public int ArticleId { get; set; }
         [NotMapped]
-        public virtual Author Author { get; set; }
+        [JsonIgnore]
+        public virtual Article Article { get; set; }
         public int AuthorId { get; set; }
         [NotMapped]
+        [JsonIgnore]
+        public virtual Author Author { get; set; }        
+        [NotMapped]
         public virtual List<Record> Records { get; set; }
-
     }
 }

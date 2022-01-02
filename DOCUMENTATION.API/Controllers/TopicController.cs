@@ -18,7 +18,7 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpPost("CreateTopic")]
-        public async Task<IActionResult> PostAsync([FromBody] TopicCreateCommand topicCreateCommand)
+        public async Task<IActionResult> PostCreateTopicAsync([FromBody] TopicCreateCommand topicCreateCommand)
         {
             var topic = await _mediator.Send(topicCreateCommand);
 
@@ -44,7 +44,7 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpPut("UpdateTopic")]
-        public async Task<IActionResult> UpdateAsync([FromBody] TopicUpdateCommand topicUpdateCommand)
+        public async Task<IActionResult> UpdateTopicAsync([FromBody] TopicUpdateCommand topicUpdateCommand)
         {
             var topic = await _mediator.Send(topicUpdateCommand);
 
@@ -52,7 +52,7 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpPut("DeleteTopic")]
-        public async Task<IActionResult> DeleteAsync([FromBody] TopicDeleteCommand topicDeleteCommand)
+        public async Task<IActionResult> DeleteTopicAsync([FromBody] TopicDeleteCommand topicDeleteCommand)
         {
             var topic = await _mediator.Send(topicDeleteCommand);
 

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "tQogEuHoh5GY5NW9Hnn7mM/ttm8lcnZZVxFvWfdxwK4xhwuUC4fANXSKHXwaCMGVaAk7jIBG5J+CkYjXsYyQZw==",
+  "dgSpecHash": "NM6fO0zdgexOTlARWC1A23oyO+YCSDvre/6lrpboK/ptsgF6fJDCW0V3XmldDPg0Lip0aYjs4PzKwkoUGwPL5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\114534\\Documents\\Projetos\\DOCUMENTATION\\DOCUMENTATION.API\\DOCUMENTATION.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\114534\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\114534\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\efcore.bulkextensions\\5.4.1\\efcore.bulkextensions.5.4.1.nupkg.sha512",
     "C:\\Users\\114534\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
