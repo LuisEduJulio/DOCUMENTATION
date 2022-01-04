@@ -23,5 +23,21 @@ namespace DOCUMENTATION.API.Controllers
 
             return Ok(topic);
         }
+
+        [HttpPut("UpdateComment")]
+        public async Task<IActionResult> UpdateCommentAsync([FromBody] CommentUpdateCommand commentUpdateCommand)
+        {
+            var topic = await _mediator.Send(commentUpdateCommand);
+
+            return Ok(topic);
+        }
+
+        [HttpPut("DisableComment")]
+        public async Task<IActionResult> UpdateDisableCommentAsync([FromBody] CommentUpdateDisableCommand commentUpdateDisableCommand)
+        {
+            var topic = await _mediator.Send(commentUpdateDisableCommand);
+
+            return Ok(topic);
+        }
     }
 }
