@@ -66,7 +66,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.ArticlesCommandHandler
             await _mediator.Send(new RecordCreateCommand()
             {
                 EStatusRecord = EStatusRecord.CREATE,
-                Description = $"Artigo criado por {author.Name} no tópico {topic.Title}",
+                Description = $"Artigo criado por {author.Name} no tópico {topic.Title}.",
                 AuthorId = author.Id,
                 TopicId = topic.Id,
                 ArticleId = articlerCreate.Id

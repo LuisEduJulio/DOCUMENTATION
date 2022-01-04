@@ -42,6 +42,30 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
                 throw new CustomException("Tópico não existe!");
             }
 
+            var topicSon = await VeriFyExistTopicSon(request);
+
+            topic.Title = request.Title ?? topic.Title;
+            topic.Description = request.Description ?? topic.Description;
+            topic.TopicId = request.TopicId != null ? topicSon?.Id : null;
+            topic.DateUpdated = DateTime.Now;
+
+            var topicUpdate = await _topicRepository.UpdateAsync(topic);
+
+            var author = await _authorRepository.GetIdAsync(topic.AuthorId);
+
+            await _mediator.Send(new RecordCreateCommand()
+            {
+                EStatusRecord = EStatusRecord.UPDATE,
+                Description = $"Tópico alterado em {DateTime.Now} por {author.Name}.",
+                AuthorId = topic.AuthorId,
+                TopicId = topic.Id
+            }, cancellationToken);
+
+            return topicUpdate;
+        }
+
+        private async Task<Topic> VeriFyExistTopicSon(TopicUpdateCommand request)
+        {
             var topicSon = new Topic();
 
             if (request.TopicId != null)
@@ -58,24 +82,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
                 topicSon.Id = verifyTopicSonExist.Id;
             }
 
-            topic.Title = request.Title ?? topic.Title;
-            topic.Description = request.Description ?? topic.Description;
-            topic.TopicId = request.TopicId != null ? topicSon?.Id : null;
-            topic.DateUpdated = DateTime.Now;
-
-            var topicUpdate = await _topicRepository.UpdateAsync(topic);
-
-            var author = await _authorRepository.GetIdAsync(topic.AuthorId);
-
-            await _mediator.Send(new RecordCreateCommand()
-            {
-                EStatusRecord = EStatusRecord.UPDATE,
-                Description = $"Tópico alterado em {DateTime.Now} por {author.Name}",
-                AuthorId = topic.AuthorId,
-                TopicId = topic.Id
-            }, cancellationToken);
-
-            return topicUpdate;
+            return topicSon;
         }
     }
 }

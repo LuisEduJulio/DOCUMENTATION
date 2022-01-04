@@ -51,7 +51,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.ArticlesCommandHandler
             await _mediator.Send(new RecordCreateCommand()
             {
                 EStatusRecord = EStatusRecord.DISABLE,
-                Description = $"Artigo desativado em {DateTime.Now} por {author.Name}",
+                Description = $"Artigo desativado em {DateTime.Now} por {author.Name}.",
                 AuthorId = articleDisable.AuthorId,
                 TopicId = articleDisable.TopicId,
                 ArticleId = articleDisable.Id

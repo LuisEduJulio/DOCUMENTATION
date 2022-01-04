@@ -55,7 +55,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.ArticlesCommandHandler
             await _mediator.Send(new RecordCreateCommand()
             {
                 EStatusRecord = EStatusRecord.UPDATE,
-                Description = $"Artigo alterado em {DateTime.Now} por {author.Name}",
+                Description = $"Artigo alterado em {DateTime.Now} por {author.Name}.",
                 AuthorId = topicUpdate.AuthorId,
                 TopicId = topicUpdate.TopicId,
                 ArticleId = topicUpdate.Id

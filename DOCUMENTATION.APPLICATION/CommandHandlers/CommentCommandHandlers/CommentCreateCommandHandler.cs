@@ -65,7 +65,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.CommentCommandHandlers
             await _mediator.Send(new RecordCreateCommand()
             {
                 EStatusRecord = EStatusRecord.CREATE,
-                Description = $"{author.Name} Comentou {commentCreate.Description} no artigo {article.Description}",
+                Description = $"{author.Name} comentou {commentCreate.Description} no artigo {article.Title}.",
                 AuthorId = article.AuthorId,
                 ArticleId = article.Id
             }, cancellationToken);

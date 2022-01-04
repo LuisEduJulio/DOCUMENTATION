@@ -51,7 +51,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.CommentCommandHandlers
             await _mediator.Send(new RecordCreateCommand()
             {
                 EStatusRecord = EStatusRecord.CREATE,
-                Description = $"{author.Name} excluiu o {disableComment.Description} do artigo {disableComment.Description}",
+                Description = $"{author.Name} excluiu o {disableComment.Description} do artigo {disableComment.Description}.",
                 AuthorId = disableComment.AuthorId,
                 ArticleId = disableComment.Id
             }, cancellationToken);

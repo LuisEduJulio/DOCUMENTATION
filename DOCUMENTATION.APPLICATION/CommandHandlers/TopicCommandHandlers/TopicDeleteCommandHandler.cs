@@ -46,7 +46,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
             await _mediator.Send(new RecordCreateCommand()
             {
                 EStatusRecord = EStatusRecord.DISABLE,
-                Description = $"Tópico desativado em {DateTime.Now} por {author.Name}",
+                Description = $"Tópico desativado em {DateTime.Now} por {author.Name}.",
                 AuthorId = topic.AuthorId,
                 TopicId = topic.Id
             }, cancellationToken);

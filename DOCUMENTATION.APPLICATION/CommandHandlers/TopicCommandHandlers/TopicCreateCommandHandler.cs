@@ -46,6 +46,31 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
                 throw new CustomException("Autor não existe!");
             }
 
+            var topicSon = await VeriFyExistTopicSon(request);
+
+            var topicId = request.TopicId != null ? topicSon?.Id : null;
+
+            var topic = new Topic(request.Title, request.Description, author.Id, topicId);
+
+            var topicCreate = await _topicRepository.AddAsync(topic);
+
+            var topicCreateView = new TopicView();
+
+            var returnTopic = _mapper.Map<Topic, TopicView>(topicCreate, topicCreateView);
+
+            await _mediator.Send(new RecordCreateCommand()
+            {
+                EStatusRecord = EStatusRecord.CREATE,
+                Description = $"Tópico criado em {DateTime.Now} por {author.Name}.",
+                AuthorId = topicCreate.AuthorId,
+                TopicId = topicCreate.Id
+            }, cancellationToken);
+
+            return returnTopic;
+        }
+
+        private async Task<Topic> VeriFyExistTopicSon(TopicCreateCommand request)
+        {
             var topicSon = new Topic();
 
             if (request.TopicId != null)
@@ -62,25 +87,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
                 topicSon.Id = verifyTopicSonExist.Id;
             }
 
-            var topicId = request.TopicId != null ? topicSon?.Id : null;
-
-            var topic = new Topic(request.Title, request.Description, author.Id, topicId);
-
-            var topicCreate = await _topicRepository.AddAsync(topic);
-
-            var topicCreateView = new TopicView();
-
-            var returnTopic = _mapper.Map<Topic, TopicView>(topicCreate, topicCreateView);
-
-            await _mediator.Send(new RecordCreateCommand()
-            {
-                EStatusRecord = EStatusRecord.CREATE,
-                Description = $"Tópico criado em {DateTime.Now} por {author.Name}",
-                AuthorId = topicCreate.AuthorId,
-                TopicId = topicCreate.Id
-            }, cancellationToken);
-
-            return returnTopic;
+            return topicSon;
         }
     }
 }

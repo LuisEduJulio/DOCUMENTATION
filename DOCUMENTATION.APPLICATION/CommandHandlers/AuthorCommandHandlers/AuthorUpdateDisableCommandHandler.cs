@@ -48,7 +48,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
             await _mediator.Send(new RecordCreateCommand()
             {
                 EStatusRecord = EStatusRecord.DISABLE,
-                Description = $"Autor {author.Name} Alterado",
+                Description = $"Autor {author.Name} desativado.",
                 AuthorId = author.Id
             }, cancellationToken);
 
