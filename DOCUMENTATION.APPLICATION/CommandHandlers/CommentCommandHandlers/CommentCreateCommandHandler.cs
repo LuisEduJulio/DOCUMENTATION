@@ -11,7 +11,6 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.CommentCommandHandlers
     {
         public CommentCreateCommandHandler()
         {
-
         }
 
         public Task<Comment> Handle(CommentCreateCommand request, CancellationToken cancellationToken)

@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace DOCUMENTATION.APPLICATION.Validators.CommentCommandValidators
 {
-    class CommentUpdateCommandValidator : AbstractValidator<CommentUpdateCommand>
+    public class CommentUpdateCommandValidator : AbstractValidator<CommentUpdateCommand>
     {
         public CommentUpdateCommandValidator()
         {

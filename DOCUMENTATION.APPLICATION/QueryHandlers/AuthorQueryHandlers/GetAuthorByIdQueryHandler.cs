@@ -11,6 +11,7 @@ namespace DOCUMENTATION.APPLICATION.QueryHandlers.AuthorQueryHandler
     public class GetAuthorByIdQueryHandler : IRequestHandler<GetAuthorByIdQuery, Author>
     {
         private readonly IAuthorRepository _authorRepository;
+
         public GetAuthorByIdQueryHandler(IAuthorRepository authorRepository)
         {
             _authorRepository = authorRepository;

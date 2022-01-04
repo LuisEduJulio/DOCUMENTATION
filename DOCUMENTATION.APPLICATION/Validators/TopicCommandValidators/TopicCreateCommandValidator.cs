@@ -14,6 +14,10 @@ namespace DOCUMENTATION.APPLICATION.Validators.TopicValidators
             RuleFor(t => t.Description)
                 .NotEmpty()
                 .WithMessage("Informe a descrição do tópico!");
+
+            RuleFor(t => t.AuthorId)
+               .NotEmpty()
+               .WithMessage("Informe o criador do tópico!");
         }
     }
 }

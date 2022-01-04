@@ -13,6 +13,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
     public class AuthorUpdateDisableCommandHandler : IRequestHandler<AuthorUpdateDisableCommand, Unit>
     {
         private readonly IAuthorRepository _authorRepository;
+
         public AuthorUpdateDisableCommandHandler(IAuthorRepository authorRepository)
         {
             _authorRepository = authorRepository;

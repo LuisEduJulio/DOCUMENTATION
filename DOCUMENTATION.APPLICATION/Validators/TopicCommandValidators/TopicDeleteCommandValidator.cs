@@ -1,8 +1,5 @@
 ﻿using DOCUMENTATION.APPLICATION.Commands.TopicCommands;
 using FluentValidation;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace DOCUMENTATION.APPLICATION.Validators.TopicValidators
 {
@@ -14,7 +11,7 @@ namespace DOCUMENTATION.APPLICATION.Validators.TopicValidators
                 .NotEmpty()
                 .NotNull()
                 .When(t => t.Id == 0)
-                .WithMessage("Informe o id do tópico!");
-        }   
+                .WithMessage("Informe o tópico que deseja excluir!");
+        }
     }
 }

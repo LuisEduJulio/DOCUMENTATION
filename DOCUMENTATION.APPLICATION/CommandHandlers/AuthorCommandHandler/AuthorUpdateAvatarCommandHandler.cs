@@ -14,6 +14,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
     public class AuthorUpdateAvatarCommandHandler : IRequestHandler<AuthorUpdateAvatarCommand, AuthorView>
     {
         private readonly IAuthorRepository _authorRepository;
+
         public AuthorUpdateAvatarCommandHandler(IAuthorRepository authorRepository)
         {
             _authorRepository = authorRepository;
@@ -46,7 +47,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
             var UpdateAuthor = await _authorRepository.UpdateAsync(author);
 
             var returnAuthor = new AuthorView(
-                UpdateAuthor.Name, 
+                UpdateAuthor.Name,
                 UpdateAuthor.Description,
                 UpdateAuthor.Admin,
                 UpdateAuthor.EAvatar,

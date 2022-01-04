@@ -9,6 +9,7 @@ namespace DOCUMENTATION.APPLICATION.Querys.AuthorQuerys
         {
             Id = id;
         }
+
         public int Id { get; private set; }
     }
 }

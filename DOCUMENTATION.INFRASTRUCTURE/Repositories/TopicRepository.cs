@@ -30,7 +30,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
         {
             var topicCreate = await _dbContext.Topics.AddAsync(topic);
 
-            await _dbContext.SaveChangesAsync();            
+            await _dbContext.SaveChangesAsync();
 
             await _distributedCache.RemoveAsync(KEY_TOPIC);
 
@@ -49,7 +49,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore
                 });
             }
-            else 
+            else
             {
                 var topics = await _dbContext
                     .Topics
@@ -75,14 +75,13 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
         }
 
         public async Task<Topic> GetIdAsync(int Id)
-        {            
+        {
             var topic = await _dbContext
                 .Topics
                 .Include(s => s.Topics)
                 .FirstOrDefaultAsync(t => t.Id == Id && t.DateDeleted.HasValue == false);
 
-               
-            return topic;                
+            return topic;
         }
 
         public async Task<Topic> UpdateAsync(Topic topic)

@@ -37,7 +37,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
 
             var author = await _authorRepository.GetIdAsync(request.AuthorId);
 
-            if(author == null)
+            if (author == null)
             {
                 throw new CustomException("Autor não existe!");
             }
@@ -65,7 +65,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
             var topicCreateView = new TopicView();
 
             var returnTopic = _mapper.Map<Topic, TopicView>(topicCreate, topicCreateView);
-           
+
             return returnTopic;
         }
     }

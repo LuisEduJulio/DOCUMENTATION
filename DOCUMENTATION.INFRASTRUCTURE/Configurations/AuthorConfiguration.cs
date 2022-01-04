@@ -9,7 +9,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Configurations
         public void Configure(EntityTypeBuilder<Author> builder)
         {
             builder
-                .HasKey(p => p.Id);              
+                .HasKey(p => p.Id);
         }
     }
 }

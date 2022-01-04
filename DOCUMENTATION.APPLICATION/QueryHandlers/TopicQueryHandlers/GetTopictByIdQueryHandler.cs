@@ -14,7 +14,8 @@ namespace DOCUMENTATION.APPLICATION.QueryHandlers.TopicQueryHandlers
     {
         private readonly ITopicRepository _topicRepository;
         private readonly IAuthorRepository _authorRepository;
-             private readonly IMapper _mapper;
+        private readonly IMapper _mapper;
+
         public GetTopictByIdQueryHandler(ITopicRepository topicRepository, IAuthorRepository authorRepository, IMapper mapper)
         {
             _topicRepository = topicRepository;

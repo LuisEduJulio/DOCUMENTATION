@@ -23,12 +23,16 @@ namespace DOCUMENTATION.CORE.Entities
         public string Description { get; set; }
         public bool Admin { get; set; }
         public EAvatar EAvatar { get; set; }
+
         [NotMapped]
         public virtual List<Article> Articles { get; set; }
+
         [NotMapped]
         public virtual List<Topic> Topics { get; set; }
+
         [NotMapped]
         public virtual List<Comment> Comments { get; set; }
+
         [NotMapped]
         public virtual List<Record> Records { get; set; }
     }

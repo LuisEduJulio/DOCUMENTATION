@@ -14,6 +14,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
     public class AuthorUpdateAdminCommandHandler : IRequestHandler<AuthorUpdateAdminCommand, AuthorView>
     {
         private readonly IAuthorRepository _authorRepository;
+
         public AuthorUpdateAdminCommandHandler(IAuthorRepository authorRepository)
         {
             _authorRepository = authorRepository;
@@ -33,7 +34,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
             if (author == null)
             {
                 throw new CustomException("Autor não existe!");
-            }          
+            }
 
             author.Admin = request.Admin;
             author.DateUpdated = DateTime.Now;

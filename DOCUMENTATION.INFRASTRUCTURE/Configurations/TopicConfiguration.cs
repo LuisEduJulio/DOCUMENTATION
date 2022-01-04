@@ -13,7 +13,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Configurations
 
             builder
                 .HasMany(p => p.Topics)
-                .WithOne()                
+                .WithOne()
                 .HasForeignKey(u => u.TopicId)
                 .IsRequired(false)
                 .OnDelete(DeleteBehavior.Restrict);

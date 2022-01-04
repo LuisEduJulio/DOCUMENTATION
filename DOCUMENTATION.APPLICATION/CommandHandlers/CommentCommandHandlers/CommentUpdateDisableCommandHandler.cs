@@ -11,7 +11,6 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.CommentCommandHandlers
     {
         public CommentUpdateDisableCommandHandler()
         {
-
         }
 
         public Task<CommentView> Handle(CommentUpdateDisableCommand request, CancellationToken cancellationToken)

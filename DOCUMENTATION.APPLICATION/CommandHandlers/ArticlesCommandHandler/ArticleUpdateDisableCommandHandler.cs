@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DOCUMENTATION.APPLICATION.CommandHandlers.ArticlesCommandHandler
 {
-    class ArticleUpdateDisableCommandHandler : IRequestHandler<ArticleUpdateDisableCommand, Unit>
+    internal class ArticleUpdateDisableCommandHandler : IRequestHandler<ArticleUpdateDisableCommand, Unit>
     {
         private readonly IArticleRepository _articleRepository;
 

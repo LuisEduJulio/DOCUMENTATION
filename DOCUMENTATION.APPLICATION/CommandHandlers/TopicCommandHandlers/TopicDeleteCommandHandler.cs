@@ -13,6 +13,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
     public class TopicDeleteCommandHandler : IRequestHandler<TopicDeleteCommand, Unit>
     {
         private readonly ITopicRepository _topicRepository;
+
         public TopicDeleteCommandHandler(ITopicRepository topicRepository)
         {
             _topicRepository = topicRepository;

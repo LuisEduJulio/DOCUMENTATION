@@ -14,10 +14,12 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
     public class TopicUpdateCommandHandler : IRequestHandler<TopicUpdateCommand, Topic>
     {
         private readonly ITopicRepository _topicRepository;
+
         public TopicUpdateCommandHandler(ITopicRepository topicRepository)
         {
             _topicRepository = topicRepository;
         }
+
         public async Task<Topic> Handle(TopicUpdateCommand request, CancellationToken cancellationToken)
         {
             var validation = await new TopicUpdateCommandValidator().ValidateAsync(request, cancellationToken);
@@ -29,7 +31,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
 
             var topic = await _topicRepository.GetIdAsync(request.Id);
 
-            if(topic == null)
+            if (topic == null)
             {
                 throw new CustomException("Tópico não existe!");
             }
@@ -42,7 +44,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
 
                 var verifyTopicSonExist = await _topicRepository.GetIdAsync(verifyTopicId);
 
-                if(verifyTopicSonExist == null)
+                if (verifyTopicSonExist == null)
                 {
                     throw new CustomException("Erro ao adicionar Tópico em outro tópico!");
                 }
@@ -54,7 +56,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
             topic.Description = request.Description ?? topic.Description;
             topic.TopicId = topicSon?.Id ?? topic.TopicId;
             topic.DateUpdated = DateTime.Now;
-            
+
             var topicUpdate = await _topicRepository.UpdateAsync(topic);
 
             return topicUpdate;

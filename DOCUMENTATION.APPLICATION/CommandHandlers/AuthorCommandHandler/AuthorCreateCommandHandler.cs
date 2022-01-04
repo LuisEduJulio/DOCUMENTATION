@@ -5,7 +5,6 @@ using DOCUMENTATION.CORE.Enums;
 using DOCUMENTATION.CORE.Repositories;
 using DOCUMENTATION.INFRASTRUCTURE.Exceptions;
 using MediatR;
-using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,7 +27,7 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
             if (!validation.IsValid)
             {
                 throw new CustomException(validation.Errors.First().ErrorMessage);
-            }           
+            }
 
             var author = new Author(request.Name, request.Description, EAvatar.DEFAULT);
 

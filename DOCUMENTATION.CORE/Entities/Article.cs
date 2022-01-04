@@ -7,7 +7,7 @@ namespace DOCUMENTATION.CORE.Entities
 {
     public class Article : BaseEntity
     {
-        public Article( string title, string description, int authorId, int topicId)
+        public Article(string title, string description, int authorId, int topicId)
         {
             Title = title;
             Description = description;
@@ -20,18 +20,23 @@ namespace DOCUMENTATION.CORE.Entities
         }
 
         public string Title { get; set; }
-        public string Description { get; set; }       
+        public string Description { get; set; }
         public int TopicId { get; set; }
+
         [NotMapped]
         [JsonIgnore]
-        public virtual Topic Topic { get; set; }       
+        public virtual Topic Topic { get; set; }
+
         public int AuthorId { get; set; }
+
         [NotMapped]
         [JsonIgnore]
         public virtual Author Author { get; set; }
+
         [NotMapped]
         [JsonIgnore]
         public virtual List<Comment> Comments { get; set; }
+
         [NotMapped]
         [JsonIgnore]
         public virtual List<Record> Records { get; set; }

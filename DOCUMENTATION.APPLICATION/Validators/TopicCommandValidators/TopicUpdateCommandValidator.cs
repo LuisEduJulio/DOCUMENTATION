@@ -11,7 +11,7 @@ namespace DOCUMENTATION.APPLICATION.Validators.TopicValidators
                 .NotEmpty()
                 .NotNull()
                 .When(t => t.Id == 0)
-                .WithMessage("Informe o id do tópico!");
+                .WithMessage("Informe o tópico que deseja alterar!");
 
             RuleFor(t => t.Title)
                 .NotEmpty()

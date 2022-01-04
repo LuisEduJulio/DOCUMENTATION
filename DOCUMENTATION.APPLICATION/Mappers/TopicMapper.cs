@@ -15,7 +15,6 @@ namespace DOCUMENTATION.APPLICATION.Mappers
                 .ForMember(dest => dest.Description, cfg => cfg.MapFrom(source => source.Description))
                 .ForMember(dest => dest.Creation, cfg => cfg.MapFrom(source => source.DateCreation))
                 .ForMember(dest => dest.Topics, cfg => cfg.MapFrom(source => source.Topics));
-
         }
     }
 }

@@ -13,6 +13,7 @@ namespace DOCUMENTATION.APPLICATION.QueryHandlers.TopicQueryHandlers
     public class GetTopicAllQueryHandler : IRequestHandler<GetTopicAllQuery, List<Topic>>
     {
         private readonly ITopicRepository _topicRepository;
+
         public GetTopicAllQueryHandler(ITopicRepository topicRepository)
         {
             _topicRepository = topicRepository;

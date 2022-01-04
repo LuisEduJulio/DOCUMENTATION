@@ -16,6 +16,6 @@ namespace DOCUMENTATION.APPLICATION.Validators.AuthorCommandValidators
             RuleFor(t => t.EAvatar)
                 .NotEmpty()
                 .WithMessage("Informe o avatar que deseja alterar!");
-        }    
+        }
     }
 }

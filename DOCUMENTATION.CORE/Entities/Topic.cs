@@ -21,20 +21,25 @@ namespace DOCUMENTATION.CORE.Entities
         }
 
         public Topic()
-        {            
+        {
         }
 
         public string Title { get; set; }
         public string Description { get; set; }
         public int? TopicId { get; set; }
+
         [NotMapped]
-        public virtual List<Topic> Topics { get; set; }       
+        public virtual List<Topic> Topics { get; set; }
+
         public int AuthorId { get; set; }
+
         [NotMapped]
         [JsonIgnore]
         public virtual Author Author { get; set; }
+
         [NotMapped]
         public virtual List<Article> Articles { get; set; }
+
         [NotMapped]
         public virtual List<Record> Records { get; set; }
     }

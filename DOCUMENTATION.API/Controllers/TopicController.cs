@@ -34,7 +34,7 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpGet("GetByIdTopic/{Id}")]
-        public async Task<IActionResult>GetByIdAsync(int Id)
+        public async Task<IActionResult> GetByIdAsync(int Id)
         {
             var getTopictByIdQuery = new GetTopictByIdQuery(Id);
 

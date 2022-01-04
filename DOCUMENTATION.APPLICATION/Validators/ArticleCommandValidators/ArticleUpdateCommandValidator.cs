@@ -9,7 +9,7 @@ namespace DOCUMENTATION.APPLICATION.Validators.ArticleCommandValidators
         {
             RuleFor(t => t.Id)
                 .NotEmpty()
-                .WithMessage("Informe o artigo!");
+                .WithMessage("Informe o artigo que deseja alterar!");
 
             RuleFor(t => t.Title)
                 .NotEmpty()

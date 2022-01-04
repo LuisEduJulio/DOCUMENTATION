@@ -19,13 +19,17 @@ namespace DOCUMENTATION.CORE.Entities
 
         public string Description { get; set; }
         public int ArticleId { get; set; }
+
         [NotMapped]
         [JsonIgnore]
         public virtual Article Article { get; set; }
+
         public int AuthorId { get; set; }
+
         [NotMapped]
         [JsonIgnore]
-        public virtual Author Author { get; set; }        
+        public virtual Author Author { get; set; }
+
         [NotMapped]
         public virtual List<Record> Records { get; set; }
     }

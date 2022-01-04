@@ -14,6 +14,14 @@ namespace DOCUMENTATION.APPLICATION.Validators.ArticleCommandValidators
             RuleFor(t => t.Description)
                 .NotEmpty()
                 .WithMessage("Informe a descrição do artigo!");
+
+            RuleFor(t => t.TopicId)
+               .NotEmpty()
+               .WithMessage("Informe o tópico que deseja adicionar o artigo!");
+
+            RuleFor(t => t.AuthorId)
+               .NotEmpty()
+               .WithMessage("Informe o autor do artigo!");
         }
     }
 }

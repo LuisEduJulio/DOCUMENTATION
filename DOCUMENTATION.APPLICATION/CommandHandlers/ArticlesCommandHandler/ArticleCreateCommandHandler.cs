@@ -16,12 +16,14 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.ArticlesCommandHandler
         private readonly IArticleRepository _articleRepository;
         private readonly ITopicRepository _topicRepository;
         private readonly IAuthorRepository _authorRepository;
+
         public ArticleCreateCommandHandler(IArticleRepository articleRepository, ITopicRepository topicRepository, IAuthorRepository authorRepository)
         {
             _articleRepository = articleRepository;
             _authorRepository = authorRepository;
             _topicRepository = topicRepository;
         }
+
         public async Task<ArticleView> Handle(ArticleCreateCommand request, CancellationToken cancellationToken)
         {
             var validation = await new ArticleCreateCommandValidator().ValidateAsync(request, cancellationToken);
