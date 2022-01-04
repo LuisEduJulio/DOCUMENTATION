@@ -20,11 +20,6 @@ C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\ref\DOCUMENTATION.IOC.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.pdb
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.genruntimeconfig.cache
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.csproj.AssemblyReference.cache
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.AssemblyInfoInputs.cache
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.AssemblyInfo.cs
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.csproj.CoreCompileInputs.cache
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\bin\Debug\net5.0\DOCUMENTATION.IOC.deps.json
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\bin\Debug\net5.0\DOCUMENTATION.IOC.runtimeconfig.json
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\bin\Debug\net5.0\DOCUMENTATION.IOC.runtimeconfig.dev.json
@@ -37,6 +32,11 @@ C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\bin\Debug\net5.0\DOC
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\bin\Debug\net5.0\DOCUMENTATION.APPLICATION.pdb
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\bin\Debug\net5.0\DOCUMENTATION.CORE.pdb
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\bin\Debug\net5.0\DOCUMENTATION.INFRASTRUCTURE.pdb
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.csproj.AssemblyReference.cache
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.AssemblyInfoInputs.cache
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.AssemblyInfo.cs
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.csproj.CoreCompileInputs.cache
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.csproj.CopyComplete
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\DOCUMENTATION.IOC.dll
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.IOC\obj\Debug\net5.0\ref\DOCUMENTATION.IOC.dll

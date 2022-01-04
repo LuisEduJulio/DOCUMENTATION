@@ -130,13 +130,13 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ArticleId")
+                    b.Property<int?>("ArticleId")
                         .HasColumnType("int");
 
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CommentId")
+                    b.Property<int?>("CommentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateCreation")
@@ -151,7 +151,10 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TopicId")
+                    b.Property<int>("EStatusRecord")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TopicId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -246,8 +249,7 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                     b.HasOne("DOCUMENTATION.CORE.Entities.Article", "Article")
                         .WithMany("Records")
                         .HasForeignKey("ArticleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("DOCUMENTATION.CORE.Entities.Author", "Author")
                         .WithMany("Records")
@@ -258,14 +260,12 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                     b.HasOne("DOCUMENTATION.CORE.Entities.Comment", "Comment")
                         .WithMany("Records")
                         .HasForeignKey("CommentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("DOCUMENTATION.CORE.Entities.Topic", "Topic")
                         .WithMany("Records")
                         .HasForeignKey("TopicId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Article");
 
@@ -281,7 +281,8 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Migrations
                     b.HasOne("DOCUMENTATION.CORE.Entities.Author", "Author")
                         .WithMany("Topics")
                         .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("DOCUMENTATION.CORE.Entities.Topic", null)
                         .WithMany("Topics")

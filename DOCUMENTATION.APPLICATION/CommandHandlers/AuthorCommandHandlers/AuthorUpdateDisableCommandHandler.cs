@@ -1,5 +1,7 @@
 ﻿using DOCUMENTATION.APPLICATION.Commands.AuthorCommand;
+using DOCUMENTATION.APPLICATION.Commands.RecordCommands;
 using DOCUMENTATION.APPLICATION.Validators.AuthorCommandValidators;
+using DOCUMENTATION.CORE.Enums;
 using DOCUMENTATION.CORE.Repositories;
 using DOCUMENTATION.INFRASTRUCTURE.Exceptions;
 using MediatR;
@@ -13,10 +15,12 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
     public class AuthorUpdateDisableCommandHandler : IRequestHandler<AuthorUpdateDisableCommand, Unit>
     {
         private readonly IAuthorRepository _authorRepository;
+        private readonly IMediator _mediator;
 
-        public AuthorUpdateDisableCommandHandler(IAuthorRepository authorRepository)
+        public AuthorUpdateDisableCommandHandler(IAuthorRepository authorRepository, IMediator mediator)
         {
             _authorRepository = authorRepository;
+            _mediator = mediator;
         }
 
         public async Task<Unit> Handle(AuthorUpdateDisableCommand request, CancellationToken cancellationToken)
@@ -40,6 +44,13 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
             author.DateDeleted = DateTime.Now;
 
             await _authorRepository.UpdateAsync(author);
+
+            await _mediator.Send(new RecordCreateCommand()
+            {
+                EStatusRecord = EStatusRecord.DISABLE,
+                Description = $"Autor {author.Name} Alterado",
+                AuthorId = author.Id
+            }, cancellationToken);
 
             return Unit.Value;
         }

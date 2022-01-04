@@ -1,12 +1,10 @@
-﻿using DOCUMENTATION.CORE.Entities;
+﻿using DOCUMENTATION.APPLICATION.ModelView.CommentView;
 using MediatR;
 
 namespace DOCUMENTATION.APPLICATION.Commands.CommentCommand
 {
-    public class CommentCreateCommand : IRequest<Comment>
+    public class CommentCreateCommand : IRequest<CommentView>
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
         public string Description { get; set; }
         public int ArticleId { get; set; }
         public int AuthorId { get; set; }

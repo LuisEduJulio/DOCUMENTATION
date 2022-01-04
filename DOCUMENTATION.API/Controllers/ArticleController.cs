@@ -34,9 +34,9 @@ namespace DOCUMENTATION.API.Controllers
         }
 
         [HttpPut("DisableArticle")]
-        public async Task<IActionResult> UpdateDisableArticleAsync([FromBody] ArticleUpdateCommand articleUpdateCommand)
+        public async Task<IActionResult> UpdateDisableArticleAsync([FromBody] ArticleUpdateDisableCommand articleUpdateDisableCommand)
         {
-            var topic = await _mediator.Send(articleUpdateCommand);
+            var topic = await _mediator.Send(articleUpdateDisableCommand);
 
             return Ok(topic);
         }

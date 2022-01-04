@@ -51,8 +51,8 @@ namespace DOCUMENTATION.API.Controllers
             return Ok(topic);
         }
 
-        [HttpPut("DeleteTopic")]
-        public async Task<IActionResult> DeleteTopicAsync([FromBody] TopicDeleteCommand topicDeleteCommand)
+        [HttpPut("DisableTopic")]
+        public async Task<IActionResult> UpdateTopicDisableAsync([FromBody] TopicDeleteCommand topicDeleteCommand)
         {
             var topic = await _mediator.Send(topicDeleteCommand);
 

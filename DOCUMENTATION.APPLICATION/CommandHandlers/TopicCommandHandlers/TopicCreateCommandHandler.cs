@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using DOCUMENTATION.APPLICATION.Commands.RecordCommands;
 using DOCUMENTATION.APPLICATION.Commands.TopicCommands;
 using DOCUMENTATION.APPLICATION.ModelView.TopicView;
 using DOCUMENTATION.APPLICATION.Validators.TopicValidators;
 using DOCUMENTATION.CORE.Entities;
+using DOCUMENTATION.CORE.Enums;
 using DOCUMENTATION.CORE.Repositories;
 using DOCUMENTATION.INFRASTRUCTURE.Exceptions;
 using MediatR;
@@ -18,12 +20,14 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
         private readonly ITopicRepository _topicRepository;
         private readonly IAuthorRepository _authorRepository;
         private readonly IMapper _mapper;
+        private readonly IMediator _mediator;
 
-        public TopicCreateCommandHandler(ITopicRepository topicRepository, IAuthorRepository authorRepository, IMapper mapper)
+        public TopicCreateCommandHandler(ITopicRepository topicRepository, IAuthorRepository authorRepository, IMapper mapper, IMediator mediator)
         {
             _topicRepository = topicRepository;
             _authorRepository = authorRepository;
             _mapper = mapper;
+            _mediator = mediator;
         }
 
         public async Task<TopicView> Handle(TopicCreateCommand request, CancellationToken cancellationToken)
@@ -58,13 +62,23 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.TopicCommandHandlers
                 topicSon.Id = verifyTopicSonExist.Id;
             }
 
-            var topic = new Topic(request.Title, request.Description, author.Id, topicSon?.Id);
+            var topicId = request.TopicId != null ? topicSon?.Id : null;
+
+            var topic = new Topic(request.Title, request.Description, author.Id, topicId);
 
             var topicCreate = await _topicRepository.AddAsync(topic);
 
             var topicCreateView = new TopicView();
 
             var returnTopic = _mapper.Map<Topic, TopicView>(topicCreate, topicCreateView);
+
+            await _mediator.Send(new RecordCreateCommand()
+            {
+                EStatusRecord = EStatusRecord.CREATE,
+                Description = $"Tópico criado em {DateTime.Now} por {author.Name}",
+                AuthorId = topicCreate.AuthorId,
+                TopicId = topicCreate.Id
+            }, cancellationToken);
 
             return returnTopic;
         }

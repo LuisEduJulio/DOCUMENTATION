@@ -1,7 +1,9 @@
 ﻿using DOCUMENTATION.APPLICATION.Commands.ArticlesCommand;
+using DOCUMENTATION.APPLICATION.Commands.RecordCommands;
 using DOCUMENTATION.APPLICATION.ModelView.ArticleView;
 using DOCUMENTATION.APPLICATION.Validators.ArticleCommandValidators;
 using DOCUMENTATION.CORE.Entities;
+using DOCUMENTATION.CORE.Enums;
 using DOCUMENTATION.CORE.Repositories;
 using DOCUMENTATION.INFRASTRUCTURE.Exceptions;
 using MediatR;
@@ -16,12 +18,14 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.ArticlesCommandHandler
         private readonly IArticleRepository _articleRepository;
         private readonly ITopicRepository _topicRepository;
         private readonly IAuthorRepository _authorRepository;
+        private readonly IMediator _mediator;
 
-        public ArticleCreateCommandHandler(IArticleRepository articleRepository, ITopicRepository topicRepository, IAuthorRepository authorRepository)
+        public ArticleCreateCommandHandler(IArticleRepository articleRepository, ITopicRepository topicRepository, IAuthorRepository authorRepository, IMediator mediator)
         {
             _articleRepository = articleRepository;
             _authorRepository = authorRepository;
             _topicRepository = topicRepository;
+            _mediator = mediator;
         }
 
         public async Task<ArticleView> Handle(ArticleCreateCommand request, CancellationToken cancellationToken)
@@ -58,6 +62,15 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.ArticlesCommandHandler
                 articlerCreate.TopicId,
                 articlerCreate.DateCreation
             );
+
+            await _mediator.Send(new RecordCreateCommand()
+            {
+                EStatusRecord = EStatusRecord.CREATE,
+                Description = $"Artigo criado por {author.Name} no tópico {topic.Title}",
+                AuthorId = author.Id,
+                TopicId = topic.Id,
+                ArticleId = articlerCreate.Id
+            }, cancellationToken);
 
             return returnArticle;
         }

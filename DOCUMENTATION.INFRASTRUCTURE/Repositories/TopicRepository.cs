@@ -53,6 +53,8 @@ namespace DOCUMENTATION.INFRASTRUCTURE.Repositories
             {
                 var topics = await _dbContext
                     .Topics
+                    .Include(t => t.Topics)
+                    .Include(a => a.Articles)
                     .Where(t => t.DateDeleted.HasValue == false)
                     .ToListAsync();
 

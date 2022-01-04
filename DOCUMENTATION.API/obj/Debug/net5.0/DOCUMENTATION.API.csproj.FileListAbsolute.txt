@@ -96,12 +96,6 @@ C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.genruntimeconfig.cache
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\114534\Documents\Projetos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.csproj.AssemblyReference.cache
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.AssemblyInfoInputs.cache
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.AssemblyInfo.cs
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.csproj.CoreCompileInputs.cache
-C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\appsettings.json
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\DOCUMENTATION.API.exe
@@ -184,6 +178,13 @@ C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\DOC
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\DOCUMENTATION.APPLICATION.pdb
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\DOCUMENTATION.CORE.pdb
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\bin\Debug\net5.0\DOCUMENTATION.INFRASTRUCTURE.pdb
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.csproj.AssemblyReference.cache
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.AssemblyInfoInputs.cache
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.AssemblyInfo.cs
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.csproj.CoreCompileInputs.cache
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\DOCUMENTATION.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\staticwebassets\DOCUMENTATION.API.StaticWebAssets.Manifest.cache
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\staticwebassets\DOCUMENTATION.API.StaticWebAssets.xml
 C:\Users\luis_\source\repos\DOCUMENTATION\DOCUMENTATION.API\obj\Debug\net5.0\scopedcss\bundle\DOCUMENTATION.API.styles.css

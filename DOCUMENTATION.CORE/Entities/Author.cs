@@ -1,4 +1,5 @@
 ﻿using DOCUMENTATION.CORE.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,6 +13,7 @@ namespace DOCUMENTATION.CORE.Entities
             Description = description;
             Admin = false;
             EAvatar = eAvatar;
+            DateCreation = DateTime.Now;
 
             Articles = new List<Article>();
             Topics = new List<Topic>();

@@ -7,6 +7,9 @@ namespace DOCUMENTATION.APPLICATION.Validators.CommentCommandValidators
     {
         public CommentUpdateDisableCommandValidator()
         {
+            RuleFor(t => t.Id)
+                .NotEmpty()
+                .WithMessage("Informe o comentário que deseja excluir!");
         }
     }
 }

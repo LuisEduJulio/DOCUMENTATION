@@ -1,6 +1,8 @@
 ﻿using DOCUMENTATION.APPLICATION.Commands.AuthorCommand;
+using DOCUMENTATION.APPLICATION.Commands.RecordCommands;
 using DOCUMENTATION.APPLICATION.ModelView.AuthorView;
 using DOCUMENTATION.APPLICATION.Validators.AuthorCommandValidators;
+using DOCUMENTATION.CORE.Enums;
 using DOCUMENTATION.CORE.Repositories;
 using DOCUMENTATION.INFRASTRUCTURE.Exceptions;
 using MediatR;
@@ -14,10 +16,12 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
     public class AuthorUpdateAvatarCommandHandler : IRequestHandler<AuthorUpdateAvatarCommand, AuthorView>
     {
         private readonly IAuthorRepository _authorRepository;
+        private readonly IMediator _mediator;
 
-        public AuthorUpdateAvatarCommandHandler(IAuthorRepository authorRepository)
+        public AuthorUpdateAvatarCommandHandler(IAuthorRepository authorRepository, IMediator mediator)
         {
             _authorRepository = authorRepository;
+            _mediator = mediator;
         }
 
         public async Task<AuthorView> Handle(AuthorUpdateAvatarCommand request, CancellationToken cancellationToken)
@@ -53,6 +57,13 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.AuthorCommandHandler
                 UpdateAuthor.EAvatar,
                 UpdateAuthor.DateUpdated
             );
+
+            await _mediator.Send(new RecordCreateCommand()
+            {
+                EStatusRecord = EStatusRecord.UPDATE,
+                Description = $"Autor {author.Name} Alterado",
+                AuthorId = author.Id
+            }, cancellationToken);
 
             return returnAuthor;
         }
