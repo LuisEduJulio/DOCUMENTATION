@@ -13,6 +13,9 @@ namespace DOCUMENTATION.APPLICATION.ModelView.ArticleView
             DateCreation = dateCreation;
         }
 
+        public ArticleView()
+        { }
+
         public string Title { get; set; }
         public string Description { get; set; }
         public int TopicId { get; set; }

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -23,10 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Fixtures\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\DOCUMENTATION.APPLICATION\DOCUMENTATION.APPLICATION.csproj" />
     <ProjectReference Include="..\DOCUMENTATION.CORE\DOCUMENTATION.CORE.csproj" />
   </ItemGroup>
 

@@ -21,6 +21,8 @@ namespace DOCUMENTATION.CORE.Entities
             Records = new List<Record>();
         }
 
+        public Author() { }
+
         public string Name { get; set; }
         public string Description { get; set; }
         public bool Admin { get; set; }

@@ -6,7 +6,7 @@ namespace DOCUMENTATION.UNITTEST.Fixtures
 {
     public class AuthorFixture
     {
-        public static Author CreateAuthorWithId()
+        public Author CreateAuthorWithId()
         {
             return new Faker<Author>("pt_BR")
                 .RuleFor(u => u.Id, faker => faker.Random.Number(10000))

@@ -55,22 +55,25 @@ namespace DOCUMENTATION.APPLICATION.CommandHandlers.ArticlesCommandHandler
 
             var articlerCreate = await _articleRepository.AddAsync(article);
 
-            var returnArticle = new ArticleView(
+            var returnArticle = articlerCreate != null ? new ArticleView(
                 articlerCreate.Title,
                 articlerCreate.Description,
                 articlerCreate.AuthorId,
                 articlerCreate.TopicId,
                 articlerCreate.DateCreation
-            );
+            ) : null;
 
-            await _mediator.Send(new RecordCreateCommand()
+            if (articlerCreate != null)
             {
-                EStatusRecord = EStatusRecord.CREATE,
-                Description = $"Artigo criado por {author.Name} no tópico {topic.Title}.",
-                AuthorId = author.Id,
-                TopicId = topic.Id,
-                ArticleId = articlerCreate.Id
-            }, cancellationToken);
+                await _mediator.Send(new RecordCreateCommand()
+                {
+                    EStatusRecord = EStatusRecord.CREATE,
+                    Description = $"Artigo criado por {author.Name} no tópico {topic.Title}.",
+                    AuthorId = author.Id,
+                    TopicId = topic.Id,
+                    ArticleId = articlerCreate.Id
+                }, cancellationToken);
+            }
 
             return returnArticle;
         }

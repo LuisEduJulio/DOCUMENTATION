@@ -5,7 +5,7 @@ namespace DOCUMENTATION.UNITTEST.Fixtures
 {
     public class TopicFixture
     {
-        public static Topic CreateTopicWithId()
+        public Topic CreateTopicWithId()
         {
             return new Faker<Topic>("pt_BR")
                 .RuleFor(u => u.Id, faker => faker.Random.Number(10000))

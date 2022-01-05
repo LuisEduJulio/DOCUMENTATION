@@ -17,6 +17,9 @@ namespace DOCUMENTATION.CORE.Entities
             Records = new List<Record>();
         }
 
+        public Comment()
+        { }
+
         public string Description { get; set; }
         public int ArticleId { get; set; }
 
